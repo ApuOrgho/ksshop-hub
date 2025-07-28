@@ -75,13 +75,15 @@ ksshop-hub/
    yarn install
    ```
 3. **Start the development server:**
+
    ```sh
    npm start
    # or
    yarn start
    ```
-4. **Open your browser:**
-   Visit [http://localhost:3000](http://localhost:3000)
+
+4. **View the app:**
+   After starting the development server, your app will open automatically in your default browser. If not, visit [http://localhost:3000](http://localhost:3000).
 
 ## 📜 Scripts
 
@@ -92,7 +94,7 @@ ksshop-hub/
 
 ## 🌐 Live Demo
 
-Your app is deployed at: [https://apuorgho.github.io/ksshop-hub](https://apuorgho.github.io/ksshop-hub)
+Access the deployed app here: [https://apuorgho.github.io/ksshop-hub](https://apuorgho.github.io/ksshop-hub)
 
 ## 🚀 Deploying to GitHub Pages
 
