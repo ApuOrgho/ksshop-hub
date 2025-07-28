@@ -1,10 +1,10 @@
-# Moda Marketplace – Fashion E-Commerce
+# KSShop Hub – Fashion E-Commerce
 
 ![React](https://img.shields.io/badge/React-18.x-61dafb?logo=react)
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3.x-38bdf8?logo=tailwindcss)
 ![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)
 
-Moda Marketplace is a modern, responsive e-commerce web application for a clothing shop, built with React and Tailwind CSS. It features a seamless shopping experience, intuitive navigation, and a clean, professional design. Perfect as a starter for your own online store or as a learning project.
+KSShop Hub is a modern, responsive e-commerce web application for a clothing shop, built with React and Tailwind CSS. It features a seamless shopping experience, intuitive navigation, and a clean, professional design. Perfect as a starter for your own online store or as a learning project.
 
 ## ✨ Features
 
@@ -20,18 +20,38 @@ Moda Marketplace is a modern, responsive e-commerce web application for a clothi
 ## 📁 Project Structure
 
 ```
-moda-frontend/
-├── public/                # Static assets and HTML
-├── src/
-│   ├── assets/            # Images and logos
-│   ├── components/        # Reusable UI components (Header, Footer, Carousel, CartDrawer, etc.)
-│   ├── context/           # React Context for cart state
-│   ├── pages/             # Main pages (Home, Shop, ProductDetails, Cart, etc.)
-│   ├── App.js             # Main app component
-│   └── index.js           # Entry point
-├── package.json           # Project dependencies and scripts
-├── tailwind.config.js     # Tailwind CSS configuration
-└── postcss.config.js      # PostCSS configuration
+ksshop-hub/
+├── ksshop-ui/
+│   ├── public/
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   │   ├── Carousel.js
+│   │   │   ├── CartDrawer.js
+│   │   │   ├── Footer.js
+│   │   │   └── Header.js
+│   │   ├── context/
+│   │   │   └── CartContext.js
+│   │   ├── pages/
+│   │   │   ├── About.js
+│   │   │   ├── Cart.js
+│   │   │   ├── Contact.js
+│   │   │   ├── Home.js
+│   │   │   ├── OrderSuccess.jsx
+│   │   │   ├── Payment.jsx
+│   │   │   ├── PrivacyPolicy.jsx
+│   │   │   ├── ProductDetails.js
+│   │   │   ├── Shop.js
+│   │   │   ├── TermsAndConditions.jsx
+│   │   │   └── ThankYou.jsx
+│   │   ├── App.js
+│   │   └── index.js
+│   ├── package.json
+│   ├── tailwind.config.js
+│   └── postcss.config.js
+├── .gitignore
+├── package.json
+└── README.md
 ```
 
 ## 🚀 Getting Started
@@ -45,8 +65,8 @@ moda-frontend/
 
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/moda-marketplace.git
-   cd moda-marketplace/moda-frontend
+   git clone https://github.com/ApuOrgho/ksshop-hub.git
+   cd ksshop-hub/ksshop-ui
    ```
 2. **Install dependencies:**
    ```sh
@@ -68,6 +88,22 @@ moda-frontend/
 - `npm start` — Start the development server
 - `npm run build` — Build for production
 - `npm test` — Run tests
+- `npm run deploy` — Deploy to GitHub Pages
+
+## 🌐 Live Demo
+
+Your app is deployed at: [https://apuorgho.github.io/ksshop-hub](https://apuorgho.github.io/ksshop-hub)
+
+## 🚀 Deploying to GitHub Pages
+
+To deploy updates to GitHub Pages:
+
+```sh
+cd ksshop-ui
+npm run deploy
+```
+
+This will build the app and publish the `build/` folder to the `gh-pages` branch.
 
 ## 🎨 Customization
 
@@ -81,4 +117,6 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-> **Developed by [Apu Das Orgho]**
+---
+
+> **Developed by [Apu Das Orgho](https://github.com/ApuOrgho)**
