@@ -11,9 +11,12 @@
     "shadcn-ui": "^0.9.5",
     "tailwindcss": "^3.4.3"
   },
+  "homepage": "https://apuorgho.github.io/ksshop-hub",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -37,6 +40,7 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "gh-pages": "^6.3.0",
     "postcss": "^8.5.6"
   }
 }
