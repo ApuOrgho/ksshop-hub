@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/ksshop-hub/static/css/main.2604c79e.css",
+    "main.js": "/ksshop-hub/static/js/main.1d0036f7.js",
+    "static/js/156.5ac36780.chunk.js": "/ksshop-hub/static/js/156.5ac36780.chunk.js",
+    "static/media/ks-logo.png": "/ksshop-hub/static/media/ks-logo.e58618d9e327648f3732.png",
+    "static/media/apu-orgho.png": "/ksshop-hub/static/media/apu-orgho.67f176fd84f08b11e4cf.png",
+    "static/media/shop-owner.jpg": "/ksshop-hub/static/media/shop-owner.d1cefb046d1fa8f56d13.jpg",
+    "service-worker.js": "/ksshop-hub/service-worker.js",
+    "index.html": "/ksshop-hub/index.html",
+    "main.2604c79e.css.map": "/ksshop-hub/static/css/main.2604c79e.css.map",
+    "main.1d0036f7.js.map": "/ksshop-hub/static/js/main.1d0036f7.js.map",
+    "156.5ac36780.chunk.js.map": "/ksshop-hub/static/js/156.5ac36780.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2604c79e.css",
+    "static/js/main.1d0036f7.js"
+  ]
+}
