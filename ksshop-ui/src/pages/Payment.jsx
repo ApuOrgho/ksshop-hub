@@ -76,8 +76,11 @@ export default function Payment() {
         Select Payment Method
       </h1>
       <form
-        onSubmit={handleSubmit}
         className="bg-white rounded shadow p-6 flex flex-col gap-6"
+        onSubmit={(e) => {
+          e.preventDefault();
+          navigate("/order-success");
+        }}
       >
         {/* Hidden form for FormSubmit */}
         <form

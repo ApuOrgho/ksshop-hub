@@ -1,6 +1,6 @@
 import React from "react";
 import { useCart } from "../context/CartContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function CartPage() {
   const { cart, updateQty, removeItem, total, clearCart } = useCart();
@@ -16,9 +16,9 @@ export default function CartPage() {
       {cart.length === 0 ? (
         <div className="text-center text-neutral-500">
           Your cart is empty.{" "}
-          <a href="/shop" className="text-primary hover:underline">
+          <Link to="/shop" className="text-primary hover:underline">
             Shop now
-          </a>
+          </Link>
         </div>
       ) : (
         <div className="overflow-x-auto">
