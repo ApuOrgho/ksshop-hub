@@ -28,48 +28,50 @@ function AppContent() {
     document.title = "KS Shop";
   }, []);
   return (
-    <AuthProvider>
-      <CartProvider>
-        <Header />
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/shop" element={<Shop />} />
-            <Route path="/product/:id" element={<ProductDetails />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/thank-you" element={<ThankYou />} />
-            <Route
-              path="/newsletter-thank-you"
-              element={<NewsletterThankYou />}
-            />
-            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-            <Route
-              path="/terms-and-conditions"
-              element={<TermsAndConditions />}
-            />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register" element={<Register />} />
-            <Route path="/verify-email" element={<VerifyEmail />} />
-            <Route path="/email-verified" element={<EmailVerified />} />
-            {/* Protected Routes */}
-            <Route path="/cart" element={<CartPage />} />
-            <Route path="/order-success" element={<OrderSuccess />} />
-            <Route path="/payment" element={<Payment />} />
-            <Route
-              path="/profile"
-              element={
-                <RequireAuth>
-                  <Profile />
-                </RequireAuth>
-              }
-            />
-            {/* Example admin-only route: <Route path="/admin" element={<RequireAuth adminOnly={true}><AdminPage /></RequireAuth>} /> */}
-          </Routes>
-        </main>
-        <Footer />
-      </CartProvider>
-    </AuthProvider>
+    <BrowserRouter>
+      <AuthProvider>
+        <CartProvider>
+          <Header />
+          <main className="flex-1">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/shop" element={<Shop />} />
+              <Route path="/product/:id" element={<ProductDetails />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/thank-you" element={<ThankYou />} />
+              <Route
+                path="/newsletter-thank-you"
+                element={<NewsletterThankYou />}
+              />
+              <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+              <Route
+                path="/terms-and-conditions"
+                element={<TermsAndConditions />}
+              />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
+              <Route path="/verify-email" element={<VerifyEmail />} />
+              <Route path="/email-verified" element={<EmailVerified />} />
+              {/* Protected Routes */}
+              <Route path="/cart" element={<CartPage />} />
+              <Route path="/order-success" element={<OrderSuccess />} />
+              <Route path="/payment" element={<Payment />} />
+              <Route
+                path="/profile"
+                element={
+                  <RequireAuth>
+                    <Profile />
+                  </RequireAuth>
+                }
+              />
+              {/* Example admin-only route: <Route path="/admin" element={<RequireAuth adminOnly={true}><AdminPage /></RequireAuth>} /> */}
+            </Routes>
+          </main>
+          <Footer />
+        </CartProvider>
+      </AuthProvider>
+    </BrowserRouter>
   );
 }
 

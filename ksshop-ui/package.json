@@ -15,7 +15,7 @@
     "swiper": "^11.2.10",
     "tailwindcss": "^3.4.3"
   },
-  "homepage": "https://apuorgho.github.io/ksshop-hub",
+  "homepage": "https://apuorgho.github.io/ksshop--hub",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
