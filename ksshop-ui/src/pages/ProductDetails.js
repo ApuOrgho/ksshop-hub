@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import { useCart } from "../context/CartContext";
 import { useAuth } from "../context/AuthContext";
+import productsData from "../data/products.json";
 
 // ...existing code...
 
@@ -17,15 +18,10 @@ export default function ProductDetails() {
   const { user } = useAuth();
 
   useEffect(() => {
-    async function fetchProduct() {
-      const res = await fetch(`/api/products/${id}`);
-      if (!res.ok) return setProduct(null);
-      const data = await res.json();
-      setProduct(data);
-      setSelectedSize(data.sizes?.[0] || "");
-      setMainImg(data.images?.[0] || data.image || "");
-    }
-    fetchProduct();
+    const prod = productsData.find((p) => String(p.id) === String(id));
+    setProduct(prod || null);
+    setSelectedSize(prod?.sizes?.[0] || "");
+    setMainImg(prod?.images?.[0] || prod?.image || "");
   }, [id]);
 
   useEffect(() => {
