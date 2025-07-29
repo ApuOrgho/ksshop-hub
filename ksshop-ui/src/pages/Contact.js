@@ -42,7 +42,10 @@ export default function Contact() {
 
         {/* Contact Form */}
         <form
-          action="https://formsubmit.co/apu2723@gmail.com"
+          action={
+            process.env.REACT_APP_CONTACT_FORM_URL ||
+            "https://formsubmit.co/apu2723@gmail.com"
+          }
           method="POST"
           className="flex-1 bg-white rounded-xl shadow-lg p-8 flex flex-col gap-6"
         >

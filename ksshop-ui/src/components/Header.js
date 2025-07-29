@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { useCart } from "../context/CartContext";
+import { useAuth } from "../context/AuthContext";
 import ksLogo from "../assets/ks-logo.png";
 
 const navLinks = [
@@ -14,22 +15,23 @@ const navLinks = [
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { count } = useCart();
+  const { user, logout } = useAuth();
+  const adminEmail = "admin@example.com"; // Change to your admin email
 
   return (
     <header className="sticky top-0 z-30 bg-white/80 backdrop-blur border-b border-neutral-200 shadow-sm">
       <div className="container mx-auto flex flex-col md:flex-row items-center justify-between py-4 px-4 md:px-8">
-
         {/* Logo + KS Shop Button */}
         <div className="flex flex-col items-center">
           <Link to="/" className="flex items-center gap-3">
-            <img 
-              src={ksLogo} 
-              alt="KS Shop Logo" 
+            <img
+              src={ksLogo}
+              alt="KS Shop Logo"
               className="h-16 w-16 object-cover rounded-full border-2 border-primary shadow-lg"
             />
           </Link>
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="mt-2 bg-primary text-white px-4 py-1 rounded-full text-sm font-medium hover:bg-primary/90 transition"
           >
             KS Shop
@@ -38,9 +40,9 @@ export default function Header() {
 
         {/* Center Space → Search Bar */}
         <div className="flex-1 flex justify-center px-6 mt-4 md:mt-0">
-          <input 
-            type="text" 
-            placeholder="Search products..." 
+          <input
+            type="text"
+            placeholder="Search products..."
             className="w-full max-w-md border border-neutral-300 rounded-full px-4 py-2 text-sm shadow-sm focus:outline-none focus:ring-2 focus:ring-primary"
           />
         </div>
@@ -63,11 +65,11 @@ export default function Header() {
 
           {/* Cart Icon */}
           <Link to="/cart" className="relative group ml-2">
-            <svg 
-              className="w-7 h-7 text-neutral-700 group-hover:text-primary transition-colors" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2" 
+            <svg
+              className="w-7 h-7 text-neutral-700 group-hover:text-primary transition-colors"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
               viewBox="0 0 24 24"
             >
               <path d="M3 3h2l.4 2M7 13h10l4-8H5.4" />
@@ -80,19 +82,63 @@ export default function Header() {
               </span>
             )}
           </Link>
+
+          {/* Auth/User Section */}
+          {user ? (
+            <div className="flex items-center gap-3 ml-4">
+              <Link to="/profile" className="flex items-center gap-2">
+                <img
+                  src={
+                    user.profilePhoto || user.photoURL || "/default-avatar.png"
+                  }
+                  alt="avatar"
+                  className="w-8 h-8 rounded-full object-cover border"
+                />
+                <span className="font-medium text-neutral-800">
+                  {user.fullName || user.displayName || user.email}
+                </span>
+              </Link>
+              {user.email === adminEmail && (
+                <span className="ml-2 px-2 py-0.5 bg-yellow-400 text-xs rounded">
+                  Admin
+                </span>
+              )}
+              <button
+                onClick={logout}
+                className="ml-2 text-sm text-red-600 hover:underline"
+              >
+                Logout
+              </button>
+            </div>
+          ) : (
+            <>
+              <Link
+                to="/login"
+                className="ml-4 text-sm text-blue-600 hover:underline"
+              >
+                Login
+              </Link>
+              <Link
+                to="/register"
+                className="ml-2 text-sm text-blue-600 hover:underline"
+              >
+                Register
+              </Link>
+            </>
+          )}
         </nav>
 
         {/* Mobile Menu Toggle */}
-        <button 
-          className="md:hidden flex items-center" 
-          onClick={() => setMenuOpen(!menuOpen)} 
+        <button
+          className="md:hidden flex items-center"
+          onClick={() => setMenuOpen(!menuOpen)}
           aria-label="Toggle menu"
         >
-          <svg 
-            className="w-8 h-8 text-neutral-800" 
-            fill="none" 
-            stroke="currentColor" 
-            strokeWidth="2" 
+          <svg
+            className="w-8 h-8 text-neutral-800"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
             viewBox="0 0 24 24"
           >
             <path d="M4 6h16M4 12h16M4 18h16" />

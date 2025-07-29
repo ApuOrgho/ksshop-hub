@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -13,45 +13,80 @@ import OrderSuccess from "./pages/OrderSuccess";
 import Payment from "./pages/Payment";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Profile from "./pages/Profile";
+import VerifyEmail from "./pages/VerifyEmail";
+import EmailVerified from "./pages/EmailVerified";
 import { CartProvider } from "./context/CartContext";
+import { AuthProvider } from "./context/AuthContext";
+import RequireAuth from "./components/RequireAuth";
 
 function AppContent() {
   useEffect(() => {
     document.title = "KS Shop";
   }, []);
   return (
-    <>
-      <Header />
-      <main className="flex-1">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/shop" element={<Shop />} />
-          <Route path="/product/:id" element={<ProductDetails />} />
-          <Route path="/cart" element={<CartPage />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/thank-you" element={<ThankYou />} />
-          <Route path="/order-success" element={<OrderSuccess />} />
-          <Route path="/payment" element={<Payment />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-        </Routes>
-      </main>
-      <Footer />
-    </>
+    <AuthProvider>
+      <CartProvider>
+        <Header />
+        <main className="flex-1">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/shop" element={<Shop />} />
+            <Route path="/product/:id" element={<ProductDetails />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/thank-you" element={<ThankYou />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route
+              path="/terms-and-conditions"
+              element={<TermsAndConditions />}
+            />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+            <Route path="/verify-email" element={<VerifyEmail />} />
+            <Route path="/email-verified" element={<EmailVerified />} />
+            {/* Protected Routes */}
+            <Route
+              path="/cart"
+              element={
+                <RequireAuth>
+                  <CartPage />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path="/order-success"
+              element={
+                <RequireAuth>
+                  <OrderSuccess />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path="/payment"
+              element={
+                <RequireAuth>
+                  <Payment />
+                </RequireAuth>
+              }
+            />
+            <Route
+              path="/profile"
+              element={
+                <RequireAuth>
+                  <Profile />
+                </RequireAuth>
+              }
+            />
+            {/* Example admin-only route: <Route path="/admin" element={<RequireAuth adminOnly={true}><AdminPage /></RequireAuth>} /> */}
+          </Routes>
+        </main>
+        <Footer />
+      </CartProvider>
+    </AuthProvider>
   );
 }
 
-function App() {
-  return (
-    <CartProvider>
-      <Router>
-        <div className="flex flex-col min-h-screen font-sans bg-white text-neutral-900">
-          <AppContent />
-        </div>
-      </Router>
-    </CartProvider>
-  );
-}
-
-export default App;
+export default AppContent;
