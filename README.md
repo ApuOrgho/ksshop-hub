@@ -139,7 +139,7 @@ ksshop-hub/
 
 ## 🌐 Live Demo
 
-Access the deployed app here: [https://apuorgho.github.io/ksshop-hub](https://apuorgho.github.io/ksshop-hub)
+Access the deployed app here: [https://apuorgho.github.io/ksshop-hub](https://apuorgho.github.io/ksshop--hub)
 
 ## 🚀 Deploying to GitHub Pages
 
