@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import ksLogo from "../assets/ks-logo.png";
 import { useNavigate } from "react-router-dom";
 
 export default function Register() {
   const [form, setForm] = useState({
+    username: "",
     name: "",
     email: "",
     phone: "",
@@ -40,6 +42,12 @@ export default function Register() {
     setSuccess("");
 
     // Validation
+    if (form.username.length < 3)
+      return setError("Username must be at least 3 characters");
+    // Check for unique username
+    const users = JSON.parse(localStorage.getItem("users") || "[]");
+    if (users.some((u) => u.username === form.username))
+      return setError("Username already exists");
     if (form.name.length < 3)
       return setError("Name must be at least 3 characters");
     if (!/^\d{10,15}$/.test(form.phone))
@@ -55,29 +63,24 @@ export default function Register() {
 
     setLoading(true);
     try {
-      const data = new FormData();
-      data.append("fullName", form.name);
-      data.append("email", form.email);
-      data.append("phone", form.phone);
-      data.append("password", form.password);
-      data.append("confirmPassword", form.confirm);
-      if (form.photo) data.append("profilePhoto", form.photo);
-      data.append("address[city]", form.address.city);
-      data.append("address[house]", form.address.house);
-      data.append("address[village]", form.address.village);
-
-      const res = await fetch("/api/auth/register", {
-        method: "POST",
-        body: data,
-      });
-      const result = await res.json();
-
-      if (!res.ok) {
-        setError(result.message || result.error || "Registration failed");
-        setLoading(false);
-        return;
-      }
-
+      // Simulate registration locally (for static demo)
+      // Store user info in localStorage for login compatibility
+      const newUser = {
+        username: form.username,
+        name: form.name,
+        email: form.email,
+        phone: form.phone,
+        password: await window.crypto.subtle
+          .digest("SHA-256", new TextEncoder().encode(form.password))
+          .then((buf) =>
+            Array.from(new Uint8Array(buf))
+              .map((b) => b.toString(16).padStart(2, "0"))
+              .join("")
+          ),
+        address: form.address,
+        photo: null, // Not storing photo in localStorage for demo
+      };
+      localStorage.setItem("users", JSON.stringify([...users, newUser]));
       setSuccess("Registration successful! You can now log in.");
       setTimeout(() => navigate("/login"), 1500);
     } catch (err) {
@@ -88,179 +91,202 @@ export default function Register() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-100 to-purple-200">
-      <form
-        className="bg-white p-10 rounded-xl shadow-lg w-full max-w-lg"
-        onSubmit={handleSubmit}
-      >
-        <h2 className="text-3xl font-bold mb-8 text-center text-purple-700">
-          Register
-        </h2>
-
-        {/* Name */}
-        <div className="mb-6">
-          <label className="block mb-2 font-semibold">Full Name</label>
-          <input
-            name="name"
-            value={form.name}
-            onChange={handleChange}
-            required
-            minLength={3}
-            className="input input-bordered w-full"
-            placeholder="Full Name"
-          />
-        </div>
-
-        {/* Email */}
-        <div className="mb-6">
-          <label className="block mb-2 font-semibold">Email</label>
-          <input
-            name="email"
-            type="email"
-            value={form.email}
-            onChange={handleChange}
-            required
-            className="input input-bordered w-full"
-            placeholder="Email"
-          />
-        </div>
-
-        {/* Password */}
-        <div className="mb-6">
-          <label className="block mb-2 font-semibold">Password</label>
-          <input
-            name="password"
-            type="password"
-            value={form.password}
-            onChange={handleChange}
-            required
-            minLength={6}
-            className="input input-bordered w-full"
-            placeholder="Password"
-          />
-        </div>
-
-        {/* Confirm Password */}
-        <div className="mb-6">
-          <label className="block mb-2 font-semibold">Confirm Password</label>
-          <input
-            name="confirm"
-            type="password"
-            value={form.confirm}
-            onChange={handleChange}
-            required
-            minLength={6}
-            className="input input-bordered w-full"
-            placeholder="Confirm password"
-          />
-        </div>
-
-        {/* Phone */}
-        <div className="mb-6">
-          <label className="block mb-2 font-semibold">Phone</label>
-          <input
-            name="phone"
-            type="tel"
-            value={form.phone}
-            onChange={handleChange}
-            required
-            className="input input-bordered w-full"
-            placeholder="Phone number"
-          />
-        </div>
-
-        {/* Address */}
-        <div className="mb-6 grid grid-cols-1 md:grid-cols-3 gap-4">
-          <div>
-            <label className="block mb-2 font-semibold">City</label>
-            <input
-              name="address.city"
-              value={form.address.city}
-              onChange={handleChange}
-              required
-              className="input input-bordered w-full"
-              placeholder="City"
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-primary/10 to-purple-100">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-10 relative overflow-hidden">
+        <div className="flex flex-col items-center mb-8">
+          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/80 to-purple-400 flex items-center justify-center shadow-lg mb-2">
+            <img
+              src={ksLogo}
+              alt="KS Shop Logo"
+              className="w-14 h-14 object-contain rounded-full"
             />
           </div>
+          <h1 className="text-4xl font-extrabold text-primary mb-1 tracking-tight">
+            KS Shop
+          </h1>
+          <span className="text-gray-500 text-lg">Create your account</span>
+        </div>
+        <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label className="block mb-2 font-semibold">House</label>
-            <input
-              name="address.house"
-              value={form.address.house}
-              onChange={handleChange}
-              required
-              className="input input-bordered w-full"
-              placeholder="House"
-            />
-          </div>
-          <div>
-            <label className="block mb-2 font-semibold">
-              Village/Postal Area
+            <label className="block mb-2 font-semibold text-gray-700">
+              Username
             </label>
             <input
-              name="address.village"
-              value={form.address.village}
+              name="username"
+              value={form.username}
               onChange={handleChange}
               required
-              className="input input-bordered w-full"
-              placeholder="Village/Postal Area"
+              minLength={3}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-lg"
+              placeholder="Choose a username"
+              autoComplete="username"
             />
           </div>
-        </div>
-
-        {/* Profile Picture */}
-        <div className="mb-6">
-          <label className="block mb-2 font-semibold">
-            Profile Picture (optional)
-          </label>
-          <input
-            name="photo"
-            type="file"
-            accept="image/*"
-            onChange={handleChange}
-            className="file-input w-full"
-          />
-          {photoPreview && (
-            <img
-              src={photoPreview}
-              alt="Preview"
-              className="mt-2 rounded-full w-24 h-24 object-cover border"
+          <div>
+            <label className="block mb-2 font-semibold text-gray-700">
+              Full Name
+            </label>
+            <input
+              name="name"
+              value={form.name}
+              onChange={handleChange}
+              required
+              minLength={3}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-lg"
+              placeholder="Full Name"
             />
+          </div>
+          <div>
+            <label className="block mb-2 font-semibold text-gray-700">
+              Email
+            </label>
+            <input
+              name="email"
+              type="email"
+              value={form.email}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-lg"
+              placeholder="Email"
+            />
+          </div>
+          <div>
+            <label className="block mb-2 font-semibold text-gray-700">
+              Password
+            </label>
+            <input
+              name="password"
+              type="password"
+              value={form.password}
+              onChange={handleChange}
+              required
+              minLength={6}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-lg"
+              placeholder="Password"
+              autoComplete="new-password"
+            />
+          </div>
+          <div>
+            <label className="block mb-2 font-semibold text-gray-700">
+              Confirm Password
+            </label>
+            <input
+              name="confirm"
+              type="password"
+              value={form.confirm}
+              onChange={handleChange}
+              required
+              minLength={6}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-lg"
+              placeholder="Confirm password"
+              autoComplete="new-password"
+            />
+          </div>
+          <div>
+            <label className="block mb-2 font-semibold text-gray-700">
+              Phone
+            </label>
+            <input
+              name="phone"
+              type="tel"
+              value={form.phone}
+              onChange={handleChange}
+              required
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-lg"
+              placeholder="Phone number"
+            />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div>
+              <label className="block mb-2 font-semibold text-gray-700">
+                City
+              </label>
+              <input
+                name="address.city"
+                value={form.address.city}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-lg"
+                placeholder="City"
+              />
+            </div>
+            <div>
+              <label className="block mb-2 font-semibold text-gray-700">
+                House
+              </label>
+              <input
+                name="address.house"
+                value={form.address.house}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-lg"
+                placeholder="House"
+              />
+            </div>
+            <div>
+              <label className="block mb-2 font-semibold text-gray-700">
+                Village/ Road
+              </label>
+              <input
+                name="address.village"
+                value={form.address.village}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-lg"
+                placeholder="Vil./Road"
+              />
+            </div>
+          </div>
+          {/* Profile Picture */}
+          <div>
+            <label className="block mb-2 font-semibold text-gray-700">
+              Profile Picture (optional)
+            </label>
+            <input
+              name="photo"
+              type="file"
+              accept="image/*"
+              onChange={handleChange}
+              className="file-input w-full"
+            />
+            {photoPreview && (
+              <img
+                src={photoPreview}
+                alt="Preview"
+                className="mt-2 rounded-full w-24 h-24 object-cover border mx-auto"
+              />
+            )}
+          </div>
+          {error && (
+            <div className="text-red-500 mb-2 text-center font-semibold">
+              {error}
+            </div>
           )}
-        </div>
-
-        {/* Error & Success */}
-        {error && (
-          <div className="text-red-500 mb-4 text-center font-semibold">
-            {error}
-          </div>
-        )}
-        {success && (
-          <div className="text-green-600 mb-4 text-center font-semibold">
-            {success}
-          </div>
-        )}
-
-        {/* Submit Button */}
-        <button
-          type="submit"
-          className="w-full py-3 bg-purple-600 text-white rounded-lg font-bold text-lg shadow hover:bg-purple-700 transition mb-3"
-          disabled={loading}
-        >
-          {loading ? "Registering..." : "Register"}
-        </button>
-
-        {/* Login Link */}
-        <div className="mt-6 text-center text-gray-600">
-          Already have an account?{" "}
+          {success && (
+            <div className="text-green-600 mb-2 text-center font-semibold">
+              {success}
+            </div>
+          )}
+          <button
+            type="submit"
+            className="w-full py-3 bg-primary text-white rounded-lg font-bold text-lg shadow hover:bg-primary/90 transition mb-2"
+            disabled={loading}
+          >
+            {loading ? "Registering..." : "Register"}
+          </button>
+        </form>
+        <div className="mt-8 text-center text-gray-600">
+          <span>Already have an account? </span>
           <a
             href="/login"
-            className="text-purple-700 font-semibold hover:underline"
+            className="text-primary font-semibold hover:underline"
           >
             Login
           </a>
         </div>
-      </form>
+        <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+        <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-purple-200 rounded-full blur-2xl"></div>
+      </div>
     </div>
   );
 }
