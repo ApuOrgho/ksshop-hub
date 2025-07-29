@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ksLogo from "../assets/ks-logo.png";
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
@@ -42,61 +43,80 @@ export default function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-blue-100 to-purple-200">
-      <form
-        className="bg-white p-10 rounded-xl shadow-lg w-full max-w-md"
-        onSubmit={handleSubmit}
-      >
-        <h2 className="text-3xl font-bold mb-8 text-center text-purple-700">
-          Login to Your Account
-        </h2>
-        <div className="mb-6">
-          <label className="block mb-2 font-semibold">Username</label>
-          <input
-            name="username"
-            value={form.username}
-            onChange={handleChange}
-            required
-            minLength={3}
-            className="input input-bordered w-full"
-            placeholder="Username"
-          />
-        </div>
-        <div className="mb-6">
-          <label className="block mb-2 font-semibold">Password</label>
-          <input
-            name="password"
-            type="password"
-            value={form.password}
-            onChange={handleChange}
-            required
-            minLength={6}
-            className="input input-bordered w-full"
-            placeholder="Password"
-          />
-        </div>
-        {error && (
-          <div className="text-red-500 mb-4 text-center font-semibold">
-            {error}
+    <div className="flex items-center justify-center min-h-screen bg-gradient-to-br from-primary/10 to-purple-100">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-10 relative overflow-hidden">
+        <div className="flex flex-col items-center mb-8">
+          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary/80 to-purple-400 flex items-center justify-center shadow-lg mb-2">
+            <img
+              src={ksLogo}
+              alt="KS Shop Logo"
+              className="w-14 h-14 object-contain rounded-full"
+            />
           </div>
-        )}
-        <button
-          type="submit"
-          className="w-full py-3 bg-purple-600 text-white rounded-lg font-bold text-lg shadow hover:bg-purple-700 transition mb-3"
-          disabled={loading}
-        >
-          {loading ? "Logging in..." : "Login"}
-        </button>
-        <div className="mt-6 text-center text-gray-600">
-          Don't have an account?{" "}
+          <h1 className="text-4xl font-extrabold text-primary mb-1 tracking-tight">
+            KS Shop
+          </h1>
+          <span className="text-gray-500 text-lg">
+            Welcome back! Please login.
+          </span>
+        </div>
+        <form onSubmit={handleSubmit} className="space-y-6">
+          <div>
+            <label className="block mb-2 font-semibold text-gray-700">
+              Username
+            </label>
+            <input
+              name="username"
+              value={form.username}
+              onChange={handleChange}
+              required
+              minLength={3}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-lg"
+              placeholder="Enter your username"
+              autoComplete="username"
+            />
+          </div>
+          <div>
+            <label className="block mb-2 font-semibold text-gray-700">
+              Password
+            </label>
+            <input
+              name="password"
+              type="password"
+              value={form.password}
+              onChange={handleChange}
+              required
+              minLength={6}
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary text-lg"
+              placeholder="Enter your password"
+              autoComplete="current-password"
+            />
+          </div>
+          {error && (
+            <div className="text-red-500 mb-2 text-center font-semibold">
+              {error}
+            </div>
+          )}
+          <button
+            type="submit"
+            className="w-full py-3 bg-primary text-white rounded-lg font-bold text-lg shadow hover:bg-primary/90 transition mb-2"
+            disabled={loading}
+          >
+            {loading ? "Logging in..." : "Login"}
+          </button>
+        </form>
+        <div className="mt-8 text-center text-gray-600">
+          <span>Don't have an account? </span>
           <a
             href="/register"
-            className="text-purple-700 font-semibold hover:underline"
+            className="text-primary font-semibold hover:underline"
           >
             Register
           </a>
         </div>
-      </form>
+        <div className="absolute -top-10 -right-10 w-32 h-32 bg-primary/10 rounded-full blur-2xl"></div>
+        <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-purple-200 rounded-full blur-2xl"></div>
+      </div>
     </div>
   );
 }
