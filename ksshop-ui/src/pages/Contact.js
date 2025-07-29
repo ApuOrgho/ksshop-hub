@@ -1,6 +1,7 @@
 import React from "react";
-
+import { Link, useNavigate } from "react-router-dom";
 export default function Contact() {
+  const navigate = useNavigate();
   return (
     <div className="container mx-auto px-6 py-16 max-w-4xl">
       <h1 className="text-4xl font-extrabold mb-12 text-center text-primary">
@@ -48,6 +49,10 @@ export default function Contact() {
           }
           method="POST"
           className="flex-1 bg-white rounded-xl shadow-lg p-8 flex flex-col gap-6"
+          onSubmit={(e) => {
+            e.preventDefault();
+            navigate("/thank-you");
+          }}
         >
           <input
             type="hidden"
