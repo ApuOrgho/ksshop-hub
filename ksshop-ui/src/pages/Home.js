@@ -151,9 +151,13 @@ export default function Home() {
           </p>
           <form
             className="flex flex-col md:flex-row md:items-end gap-4"
-            action="https://formsubmit.co/YOUR_EMAIL_HERE"
+            action="https://formsubmit.co/apu2723@gmail.com"
             method="POST"
             target="_blank"
+            onSubmit={(e) => {
+              e.preventDefault();
+              navigate("/thank-you");
+            }}
           >
             <div className="flex-1 flex flex-col gap-2">
               <input
