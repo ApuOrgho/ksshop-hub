@@ -89,10 +89,26 @@ export default function About() {
       </h1>
 
       <p className="mb-8 text-xl text-gray-700 max-w-3xl mx-auto text-center leading-relaxed">
-        Welcome to <span className="font-semibold text-primary">KS Shop</span>,
-        your go-to destination for stylish, high-quality fashion with a touch
-        of local charm. We believe in empowering our customers through fashion
-        that speaks confidence, comfort, and creativity.
+        <span className="font-semibold text-primary">KS Shop</span> began as a
+        dream in a small student dorm room and has grown into a vibrant online
+        destination for Bengali fashion and lifestyle. Our journey is one of
+        passion, resilience, and a deep love for our culture.
+      </p>
+      <p className="mb-8 text-lg text-gray-700 max-w-3xl mx-auto text-center leading-relaxed">
+        Founded by <span className="font-semibold text-primary">Anish Das</span>
+        , a student entrepreneur from{" "}
+        <span className="font-semibold">Gopalganj University</span> (formerly
+        BSMRSTU), KS Shop is more than just a business—it's a story of youthful
+        ambition and community spirit. Anish started KS Shop while studying,
+        inspired by the desire to bring authentic, high-quality Bengali wear to
+        everyone, everywhere.
+      </p>
+      <p className="mb-8 text-lg text-gray-700 max-w-3xl mx-auto text-center leading-relaxed">
+        From late-night brainstorming sessions to hand-packing the very first
+        orders, every step of KS Shop’s journey has been powered by dedication
+        and a belief that fashion can connect hearts. Today, KS Shop stands as a
+        testament to what’s possible when you mix student hustle with a love for
+        tradition and innovation.
       </p>
 
       {/* Owner Section */}
@@ -105,17 +121,17 @@ export default function About() {
         <div className="flex flex-col flex-grow text-center md:text-left">
           <h2 className="text-3xl font-bold mb-3 text-primary">Anish Das</h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
-            Anish Das is the heart and soul behind KS Shop. With a background in
-            Fashion Design from Dhaka University of Fashion Technology, he
-            combines a deep respect for local craftsmanship with a passion for
-            sustainable and ethical fashion. His vision is to create a brand
-            that celebrates individuality and empowers everyone to express
-            their unique style.
+            Anish Das is a student business guy, currently studying at{" "}
+            <span className="font-semibold">Gopalganj University</span>{" "}
+            (formerly BSMRSTU). As the founder of KS Shop, he has turned his
+            passion for Bengali fashion and entrepreneurship into a growing
+            brand that serves customers all over Bangladesh and beyond.
           </p>
           <p className="text-gray-700 mb-4 leading-relaxed">
-            When he’s not curating the latest collections, Anish enjoys
-            photography and traveling, always seeking inspiration from
-            different cultures to bring fresh perspectives into his designs.
+            Anish believes in the power of hard work, honesty, and community.
+            His journey is proof that with vision and determination, even a
+            student can build something meaningful. KS Shop is not just a
+            business—it's a family, and every customer is a part of our story.
           </p>
           <p className="italic text-gray-600 leading-relaxed mb-6">
             <em>
@@ -158,12 +174,16 @@ export default function About() {
             Apu Das Orgho
           </h2>
           <p className="text-gray-700 mb-4 leading-relaxed">
-            Apu Das Orgho is the <strong>Frontend Engineer & Web Developer</strong> behind KS Shop's online presence.
-            Skilled in React and modern web technologies, Apu crafts seamless, engaging user experiences that
-            connect customers with the brand.
+            Apu Das Orgho is the{" "}
+            <strong>Frontend Engineer & Web Developer</strong> behind KS Shop's
+            online presence. Skilled in React and modern web technologies, Apu
+            crafts seamless, engaging user experiences that connect customers
+            with the brand.
           </p>
           <p className="italic text-gray-600 leading-relaxed mb-6">
-            <em>“Building digital experiences that connect people and products.”</em>
+            <em>
+              “Building digital experiences that connect people and products.”
+            </em>
           </p>
           <div className="flex justify-center md:justify-start gap-8 text-primary">
             <a
@@ -215,4 +235,3 @@ export default function About() {
     </div>
   );
 }
-
