@@ -23,12 +23,13 @@ import { CartProvider } from "./context/CartContext";
 import { AuthProvider } from "./context/AuthContext";
 import RequireAuth from "./components/RequireAuth";
 
-function AppContent() {
+function App() {
   useEffect(() => {
     document.title = "KS Shop";
   }, []);
+
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <AuthProvider>
         <CartProvider>
           <Header />
@@ -53,6 +54,7 @@ function AppContent() {
               <Route path="/register" element={<Register />} />
               <Route path="/verify-email" element={<VerifyEmail />} />
               <Route path="/email-verified" element={<EmailVerified />} />
+
               {/* Protected Routes */}
               <Route path="/cart" element={<CartPage />} />
               <Route path="/order-success" element={<OrderSuccess />} />
@@ -65,7 +67,6 @@ function AppContent() {
                   </RequireAuth>
                 }
               />
-              {/* Example admin-only route: <Route path="/admin" element={<RequireAuth adminOnly={true}><AdminPage /></RequireAuth>} /> */}
             </Routes>
           </main>
           <Footer />
@@ -75,4 +76,4 @@ function AppContent() {
   );
 }
 
-export default AppContent;
+export default App;
