@@ -1,0 +1,685 @@
+[
+  {
+    "id": 1,
+    "name": "Men's Panjabi",
+    "category": "Panjabi",
+    "price": 1499,
+    "sizes": ["S", "M", "L", "XL"],
+    "image": "https://img.freepik.com/premium-vector/cartoon-man-is-wearing-panjabi-with-white-background-vector-design_1275990-6189.jpg",
+    "images": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1465101178521-c1a9136a3b41?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80"
+    ],
+    "tags": ["featured", "bengali", "panjabi"]
+  },
+  {
+    "id": 2,
+    "name": "Women's Sharee",
+    "category": "Sharee",
+    "price": 2199,
+    "sizes": ["Free Size"],
+    "image": "https://image.lexica.art/md2_webp/df3ddfb2-f0e1-4122-bc04-011656c9cffc",
+    "images": [
+      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1465101178521-c1a9136a3b41?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1465101178521-c1a9136a3b41?auto=format&fit=crop&w=400&q=80"
+    ],
+    "tags": ["featured", "bengali", "sharee"]
+  },
+  {
+    "id": 3,
+    "name": "Kids' Panjabi Set",
+    "category": "Kids",
+    "price": 999,
+    "sizes": ["XS", "S", "M"],
+    "image": "https://www.nihalfashions.com/blog/wp-content/uploads/2018/06/Kids-Kurta-Pajama-Nihal-Fashions-1.jpg",
+    "images": [
+      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80"
+    ],
+    "tags": ["featured", "bengali", "kids"]
+  },
+  {
+    "id": 4,
+    "name": "Leather Wallet",
+    "category": "Accessories",
+    "price": 999,
+    "sizes": [],
+    "image": "https://sc04.alicdn.com/kf/H20afb7120b5b4abe87c267d7c17e8839h.jpg",
+    "images": [
+      "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80"
+    ],
+    "tags": ["popular"]
+  },
+  {
+    "id": 5,
+    "name": "Bluetooth Headphones",
+    "category": "Electronics",
+    "price": 2499,
+    "sizes": [],
+    "image": "https://img.freepik.com/premium-photo/anime-girl-with-headphones-standing-by-window-rainy-day_1361980-4697.jpg",
+    "images": [
+      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80"
+    ],
+    "tags": ["featured", "popular"]
+  },
+  {
+    "id": 6,
+    "name": "Men's Polo Shirt",
+    "category": "Men",
+    "price": 1399,
+    "sizes": ["M", "L", "XL"],
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+    "tags": ["recent"]
+  },
+  {
+    "id": 7,
+    "name": "Women's Blouse",
+    "category": "Women",
+    "price": 1599,
+    "sizes": ["S", "M"],
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "tags": ["upcoming"]
+  },
+  {
+    "id": 8,
+    "name": "Kids' Jeans",
+    "category": "Kids",
+    "price": 999,
+    "sizes": ["S", "M", "L"],
+    "image": "https://image.cdn2.seaart.me/2023-11-23/23501628304802821/c722ee9a9d2b31758a19e1733ca45902939a4051_high.webp",
+    "tags": ["popular"]
+  },
+  {
+    "id": 9,
+    "name": "Sunglasses",
+    "category": "Accessories",
+    "price": 599,
+    "sizes": [],
+    "image": "https://comicbook.com/wp-content/uploads/sites/4/2023/06/4876ba79-27f5-4774-9b33-edc48aa425e4.jpg",
+    "tags": ["featured"]
+  },
+  {
+    "id": 10,
+    "name": "Smart Watch",
+    "category": "Electronics",
+    "price": 3499,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80",
+    "tags": ["recent"]
+  },
+  {
+    "id": 11,
+    "name": "Men's Hoodie",
+    "category": "Men",
+    "price": 1799,
+    "sizes": ["M", "L", "XL"],
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+    "tags": ["upcoming"]
+  },
+  {
+    "id": 12,
+    "name": "Women's Skirt",
+    "category": "Women",
+    "price": 1299,
+    "sizes": ["S", "M", "L"],
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "tags": ["popular"]
+  },
+  {
+    "id": 13,
+    "name": "Kids' Sneakers",
+    "category": "Kids",
+    "price": 1199,
+    "sizes": ["28", "30", "32"],
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80",
+    "tags": ["featured"]
+  },
+  {
+    "id": 14,
+    "name": "Backpack",
+    "category": "Accessories",
+    "price": 1499,
+    "sizes": [],
+    "image": "https://ae01.alicdn.com/kf/S48721eb50993499d8b757d9d3c282b64W.jpg_640x640q90.jpg",
+    "tags": ["recent"]
+  },
+  {
+    "id": 15,
+    "name": "Wireless Earbuds",
+    "category": "Electronics",
+    "price": 1999,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80",
+    "tags": ["upcoming"]
+  },
+  {
+    "id": 16,
+    "name": "Men's Jeans",
+    "category": "Men",
+    "price": 1599,
+    "sizes": ["M", "L", "XL"],
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+    "tags": ["popular"]
+  },
+  {
+    "id": 17,
+    "name": "Women's Cardigan",
+    "category": "Women",
+    "price": 1799,
+    "sizes": ["S", "M", "L"],
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "tags": ["featured"]
+  },
+  {
+    "id": 18,
+    "name": "Kids' Shorts",
+    "category": "Kids",
+    "price": 699,
+    "sizes": ["XS", "S", "M"],
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80",
+    "tags": ["recent"]
+  },
+  {
+    "id": 19,
+    "name": "Scarf",
+    "category": "Accessories",
+    "price": 499,
+    "sizes": [],
+    "image": "https://assets.githubcopilot.com/attachments/file:watch-promo.png",
+    "tags": ["upcoming"]
+  },
+  {
+    "id": 20,
+    "name": "Tablet",
+    "category": "Electronics",
+    "price": 5999,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80",
+    "tags": ["popular"]
+  },
+  {
+    "id": 21,
+    "name": "Men's Jacket",
+    "category": "Men",
+    "price": 2499,
+    "sizes": ["M", "L", "XL"],
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+    "tags": ["featured"]
+  },
+  {
+    "id": 22,
+    "name": "Women's Jeans",
+    "category": "Women",
+    "price": 1499,
+    "sizes": ["S", "M", "L"],
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "tags": ["recent"]
+  },
+  {
+    "id": 23,
+    "name": "Kids' Cap",
+    "category": "Kids",
+    "price": 399,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80",
+    "tags": ["upcoming"]
+  },
+  {
+    "id": 24,
+    "name": "Belt",
+    "category": "Accessories",
+    "price": 399,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    "tags": ["popular"]
+  },
+  {
+    "id": 25,
+    "name": "Laptop",
+    "category": "Electronics",
+    "price": 29999,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80",
+    "tags": ["featured"]
+  },
+  {
+    "id": 26,
+    "name": "Men's Shorts",
+    "category": "Men",
+    "price": 899,
+    "sizes": ["M", "L", "XL"],
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+    "tags": ["recent"]
+  },
+  {
+    "id": 27,
+    "name": "Women's Top",
+    "category": "Women",
+    "price": 999,
+    "sizes": ["S", "M"],
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "tags": ["upcoming"]
+  },
+  {
+    "id": 28,
+    "name": "Kids' Dress",
+    "category": "Kids",
+    "price": 1099,
+    "sizes": ["XS", "S", "M"],
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80",
+    "tags": ["popular"]
+  },
+  {
+    "id": 29,
+    "name": "Watch",
+    "category": "Accessories",
+    "price": 1999,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    "tags": ["featured"]
+  },
+  {
+    "id": 30,
+    "name": "Camera",
+    "category": "Electronics",
+    "price": 8999,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80",
+    "tags": ["recent"]
+  },
+  {
+    "id": 31,
+    "name": "Men's Suit",
+    "category": "Men",
+    "price": 3999,
+    "sizes": ["M", "L", "XL"],
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+    "tags": ["upcoming"]
+  },
+  {
+    "id": 32,
+    "name": "Women's Shoes",
+    "category": "Women",
+    "price": 1599,
+    "sizes": ["36", "38", "40"],
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "tags": ["popular"]
+  },
+  {
+    "id": 33,
+    "name": "Kids' Sandals",
+    "category": "Kids",
+    "price": 599,
+    "sizes": ["28", "30", "32"],
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80",
+    "tags": ["featured"]
+  },
+  {
+    "id": 34,
+    "name": "Necklace",
+    "category": "Accessories",
+    "price": 1299,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    "tags": ["recent"]
+  },
+  {
+    "id": 35,
+    "name": "Power Bank",
+    "category": "Electronics",
+    "price": 1499,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80",
+    "tags": ["upcoming"]
+  },
+  {
+    "id": 36,
+    "name": "Men's Tie",
+    "category": "Men",
+    "price": 499,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+    "tags": ["popular"]
+  },
+  {
+    "id": 37,
+    "name": "Women's Hat",
+    "category": "Women",
+    "price": 799,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "tags": ["featured"]
+  },
+  {
+    "id": 38,
+    "name": "Kids' Jacket",
+    "category": "Kids",
+    "price": 1299,
+    "sizes": ["S", "M", "L"],
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80",
+    "tags": ["recent"]
+  },
+  {
+    "id": 39,
+    "name": "Bracelet",
+    "category": "Accessories",
+    "price": 599,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    "tags": ["upcoming"]
+  },
+  {
+    "id": 40,
+    "name": "Speaker",
+    "category": "Electronics",
+    "price": 2499,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80",
+    "tags": ["popular"]
+  },
+  {
+    "id": 41,
+    "name": "Men's Boots",
+    "category": "Men",
+    "price": 1999,
+    "sizes": ["7", "8", "9", "10"],
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+    "tags": ["featured"]
+  },
+  {
+    "id": 42,
+    "name": "Women's Scarf",
+    "category": "Women",
+    "price": 599,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "tags": ["recent"]
+  },
+  {
+    "id": 43,
+    "name": "Kids' Hat",
+    "category": "Kids",
+    "price": 299,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80",
+    "tags": ["upcoming"]
+  },
+  {
+    "id": 44,
+    "name": "Ring",
+    "category": "Accessories",
+    "price": 399,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    "tags": ["popular"]
+  },
+  {
+    "id": 45,
+    "name": "Drone",
+    "category": "Electronics",
+    "price": 12999,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80",
+    "tags": ["featured"]
+  },
+  {
+    "id": 46,
+    "name": "Men's Sweater",
+    "category": "Men",
+    "price": 1499,
+    "sizes": ["M", "L", "XL"],
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+    "tags": ["recent"]
+  },
+  {
+    "id": 47,
+    "name": "Women's Blazer",
+    "category": "Women",
+    "price": 2499,
+    "sizes": ["S", "M", "L"],
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "tags": ["upcoming"]
+  },
+  {
+    "id": 48,
+    "name": "Kids' Socks",
+    "category": "Kids",
+    "price": 199,
+    "sizes": ["XS", "S", "M"],
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80",
+    "tags": ["popular"]
+  },
+  {
+    "id": 49,
+    "name": "Earrings",
+    "category": "Accessories",
+    "price": 499,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    "tags": ["featured"]
+  },
+  {
+    "id": 50,
+    "name": "VR Headset",
+    "category": "Electronics",
+    "price": 7999,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80",
+    "tags": ["recent"]
+  },
+  {
+    "id": 51,
+    "name": "Men's Track Pants",
+    "category": "Men",
+    "price": 999,
+    "sizes": ["M", "L", "XL"],
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+    "tags": ["upcoming"]
+  },
+  {
+    "id": 52,
+    "name": "Women's Leggings",
+    "category": "Women",
+    "price": 899,
+    "sizes": ["S", "M", "L"],
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "tags": ["popular"]
+  },
+  {
+    "id": 53,
+    "name": "Kids' Gloves",
+    "category": "Kids",
+    "price": 299,
+    "sizes": ["XS", "S", "M"],
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80",
+    "tags": ["featured"]
+  },
+  {
+    "id": 54,
+    "name": "Pendant",
+    "category": "Accessories",
+    "price": 799,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    "tags": ["recent"]
+  },
+  {
+    "id": 55,
+    "name": "Smartphone",
+    "category": "Electronics",
+    "price": 24999,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80",
+    "tags": ["upcoming"]
+  },
+  {
+    "id": 56,
+    "name": "Men's Vest",
+    "category": "Men",
+    "price": 699,
+    "sizes": ["M", "L", "XL"],
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+    "tags": ["popular"]
+  },
+  {
+    "id": 57,
+    "name": "Women's Tank Top",
+    "category": "Women",
+    "price": 599,
+    "sizes": ["S", "M"],
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "tags": ["featured"]
+  },
+  {
+    "id": 58,
+    "name": "Kids' Raincoat",
+    "category": "Kids",
+    "price": 899,
+    "sizes": ["S", "M", "L"],
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80",
+    "tags": ["recent"]
+  },
+  {
+    "id": 59,
+    "name": "Brooch",
+    "category": "Accessories",
+    "price": 299,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    "tags": ["upcoming"]
+  },
+  {
+    "id": 60,
+    "name": "Fitness Tracker",
+    "category": "Electronics",
+    "price": 3499,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80",
+    "tags": ["popular"]
+  },
+  {
+    "id": 61,
+    "name": "Men's Formal Shirt",
+    "category": "Men",
+    "price": 1199,
+    "sizes": ["M", "L", "XL"],
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+    "tags": ["featured"]
+  },
+  {
+    "id": 62,
+    "name": "Women's Saree",
+    "category": "Women",
+    "price": 2499,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "tags": ["recent"]
+  },
+  {
+    "id": 63,
+    "name": "Kids' Pyjamas",
+    "category": "Kids",
+    "price": 499,
+    "sizes": ["XS", "S", "M"],
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80",
+    "tags": ["upcoming"]
+  },
+  {
+    "id": 64,
+    "name": "Hairband",
+    "category": "Accessories",
+    "price": 199,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    "tags": ["popular"]
+  },
+  {
+    "id": 65,
+    "name": "Desktop Computer",
+    "category": "Electronics",
+    "price": 39999,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80",
+    "tags": ["featured"]
+  },
+  {
+    "id": 66,
+    "name": "Men's Tracksuit",
+    "category": "Men",
+    "price": 1799,
+    "sizes": ["M", "L", "XL"],
+    "image": "https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=400&q=80",
+    "tags": ["recent"]
+  },
+  {
+    "id": 67,
+    "name": "Women's Kurti",
+    "category": "Women",
+    "price": 999,
+    "sizes": ["S", "M", "L"],
+    "image": "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    "tags": ["upcoming"]
+  },
+  {
+    "id": 68,
+    "name": "Kids' Swimwear",
+    "category": "Kids",
+    "price": 699,
+    "sizes": ["XS", "S", "M"],
+    "image": "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80",
+    "tags": ["popular"]
+  },
+  {
+    "id": 69,
+    "name": "Wallet",
+    "category": "Accessories",
+    "price": 499,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80",
+    "tags": ["featured"]
+  },
+  {
+    "id": 70,
+    "name": "Bluetooth Speaker",
+    "category": "Electronics",
+    "price": 2999,
+    "sizes": [],
+    "image": "https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=crop&w=400&q=80",
+    "tags": ["recent"]
+  },
+  {
+    "id": 71,
+    "name": "Bengali Umbrella",
+    "category": "Umbrella",
+    "price": 499,
+    "sizes": ["Standard"],
+    "image": "https://images2.alphacoders.com/106/1061555.jpg",
+    "images": [
+      "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1465101178521-c1a9136a3b41?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=400&q=80",
+      "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?auto=format&fit=crop&w=400&q=80"
+    ],
+    "tags": ["featured", "bengali", "umbrella"]
+  }
+]
